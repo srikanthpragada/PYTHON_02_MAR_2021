@@ -1,8 +1,8 @@
-def greet(name = "Guest", message='Hello'):
+def greet(name="Guest", message='Hello'):
     print(f"{message}, {name}")
 
 
 greet("Tom", "Hi")
 greet("Bill")
 greet()
-greet(message = "Hi")
+greet(message="Hi")
