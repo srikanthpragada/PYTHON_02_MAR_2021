@@ -1,5 +1,9 @@
 import sys
 
+if len(sys.argv) < 2:
+    print("Usage : python table.py number [length]")
+    exit(0)   # stop program
+
 num = int(sys.argv[1])  # Second parameter
 if len(sys.argv) > 2:
     length = int(sys.argv[2])
