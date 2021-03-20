@@ -4,21 +4,20 @@ class SavingsAccount:
         # Object attributes
         self.acno = no
         self.ahname = name
-        self.balance = balance
+        # Private member
+        self.__balance = balance
 
-        # Methods
-
+    # Methods
     def deposit(self, amount):
-        self.balance += amount
+        self.__balance += amount
 
     def withdraw(self, amount):
-        self.balance -= amount
+        self.__balance -= amount
 
 
 a1 = SavingsAccount(1, "Steve")  # __init__ is called
 a1.deposit(10000)
 a1.deposit(5000)
-print(a1.balance)
+print(a1.__dict__)
+print(a1._SavingsAccount__balance)
 
-a2 = SavingsAccount(2, "Tom", 50000)
-print(a2.balance)
