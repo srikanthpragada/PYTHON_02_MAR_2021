@@ -14,10 +14,14 @@ class SavingsAccount:
     def withdraw(self, amount):
         self.__balance -= amount
 
+    @property
+    def balance(self):
+        return self.__balance
+
 
 a1 = SavingsAccount(1, "Steve")  # __init__ is called
 a1.deposit(10000)
 a1.deposit(5000)
+print(a1.balance)
 print(a1.__dict__)
-print(a1._SavingsAccount__balance)
-
+# print(a1._SavingsAccount__balance)
