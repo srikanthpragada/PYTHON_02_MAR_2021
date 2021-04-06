@@ -6,10 +6,11 @@ import os
 def file_contains(filename, st):
     try:
         with open(filename, "rt") as f:
-            if f.read().find(st) >= 0:
-                return True
-            else:
-                return False
+            for line in f.readlines():
+                if line.find(st) >= 0:
+                    return True
+
+            return False
     except:
         return False
 
@@ -29,5 +30,5 @@ for dirname, folders, files in allfiles:
     for file in files:
         filename = dirname + "\\" + file
         if filename.endswith(".py"):
-            if file_contains(filename,sys.argv[1]):
+            if file_contains(filename, sys.argv[1]):
                 print(filename)
