@@ -1,0 +1,10 @@
+Marshall,TL,3000000
+Karry,Tl,2500000
+
+Kevin,DBA,20000000
+Roberts,,1000000
+Ricky
+
+
+
+
